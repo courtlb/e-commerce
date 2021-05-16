@@ -19,14 +19,10 @@ Product.init(
     product_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-          len: [1]
-      }
     },
     price: {
       type: DataTypes.DECIMAL,
       allowNull: false,
-      //not sure if this is how to validate decimal
       validate: {
         isDecimal: true
       }
@@ -34,9 +30,7 @@ Product.init(
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      //not sure if this is how to write the default value
       defaultValue: 10,
-      //not sure if this is how to validate numeric
       validate: {
         isNumeric: true
       }
